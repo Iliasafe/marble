@@ -1,0 +1,287 @@
+
+<!DOCTYPE html>
+<html lang="fa" dir="rtl">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Marble Coffee Menu</title>
+  <link href="https://fonts.googleapis.com/css2?family=Arima+Madurai:wght@500&display=swap" rel="stylesheet" />
+  <style>
+    body {
+      margin: 0;
+      padding: 0;
+      font-family: 'Arima Madurai', sans-serif;
+      background-color: #f7e7d5;
+      color: #3e2015;
+    }
+
+    header {
+      background-color: #3e2015;
+      color: #fffbf3;
+      text-align: center;
+      padding: 30px 20px;
+      font-size: 36px;
+      font-weight: 700;
+      letter-spacing: 2px;
+      font-family: 'Arima Madurai', cursive;
+      user-select: none;
+      box-shadow: 0 4px 8px rgba(62,32,21,0.5);
+      position: sticky;
+      top: 0;
+      z-index: 100;
+      text-shadow: 2px 2px 4px rgba(0,0,0,0.2);
+    }
+
+    .menu-section {
+      padding: 30px 20px;
+      border-bottom: 2px solid #5c3a11;
+      margin: 20px auto;
+      max-width: 600px;
+      background-color: rgba(255, 255, 255, 0.95);
+      border-radius: 12px;
+      box-shadow: 0 6px 15px rgba(62, 32, 21, 0.15);
+      opacity: 0;
+      transform: translateY(30px);
+      transition: opacity 1s ease, transform 1s ease, box-shadow 0.3s ease;
+      cursor: default;
+    }
+
+    .menu-section.visible {
+      opacity: 1;
+      transform: translateY(0);
+    }
+
+    .menu-section:hover {
+      box-shadow: 0 12px 25px rgba(62, 32, 21, 0.3);
+      background-color: #fff9f0;
+    }
+
+    .section-title {
+      font-size: 26px;
+      margin-bottom: 18px;
+      font-weight: 700;
+      padding-bottom: 8px;
+      border-bottom: 2px solid #5c3a11;
+      user-select: none;
+      color: #4a2900;
+      text-shadow: 1px 1px 2px rgba(0,0,0,0.1);
+      text-align: center; /* وسط چین کردن عنوان */
+    }
+
+    .french-press {
+      font-size: 14px;
+      color: #7a5e44;
+      font-weight: 500;
+      margin-right: 6px;
+      user-select: none;
+    }
+
+    .menu-items ul {
+      list-style: none;
+      padding: 0;
+      margin: 0;
+    }
+
+    .menu-items ul li {
+      display: flex;
+      justify-content: space-between;
+      direction: rtl;
+      font-size: 19px;
+      line-height: 2.3;
+      padding: 4px 0;
+    }
+
+    .menu-items ul li span {
+      direction: ltr;
+      text-align: left;
+      min-width: 60px;
+      font-weight: 600;
+      color: #523613;
+      text-shadow: 1px 1px 1px rgba(0,0,0,0.08);
+    }
+
+    .menu-items ul li:hover {
+      color: #7b4c12;
+    }
+
+    .note {
+      font-size: 14px;
+      color: #7b4c12;
+      margin-top: 10px;
+      text-align: center;
+    }
+
+    hr.note-line {
+      margin-top: 20px;
+      border: none;
+      border-top: 1px solid #c9a678;
+    }
+
+    @media (max-width: 600px) {
+      header {
+        font-size: 28px;
+        padding: 20px 10px;
+      }
+      .section-title {
+        font-size: 22px;
+      }
+      .menu-items ul li {
+        font-size: 17px;
+      }
+      .menu-section {
+        margin: 15px 10px;
+        max-width: 95%;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <header>Marble Coffee shop</header>
+
+  <div class="menu-section">
+    <div class="section-title">Hot Coffee</div>
+    <div class="menu-items">
+      <ul>
+        <li>اسپرسو سینگل <span>40</span></li>
+        <li>اسپرسو دبل <span>50</span></li>
+        <li>ماکیاتو <span>70</span></li>
+        <li>آمریکانو <span>70</span></li>
+        <li>کاپوچینو <span>70/100</span></li>
+        <li>نسکافه <span>80/120</span></li>
+        <li>لته <span>80/130</span></li>
+        <li>موکا (کارامل/فندق) <span>100</span></li>
+      </ul>
+      <hr class="note-line" />
+      <p class="note">آیتم‌های دو قیمتی در دو سایز بزرگ و کوچک سرو می‌شود</p>
+    </div>
+  </div>
+
+  <div class="menu-section">
+    <div class="section-title">Cold Coffee</div>
+    <div class="menu-items">
+      <ul>
+        <li>آیس آمریکانو <span>70</span></li>
+        <li>آیس کاپوچینو <span>70/100</span></li>
+        <li>آیس لته <span>80/120</span></li>
+        <li>آیس موکا <span>90</span></li>
+        <li>آیس کارامل ماکیاتو <span>90</span></li>
+        <li>آفوگاتو <span>90</span></li>
+      </ul>
+      <hr class="note-line" />
+      <p class="note">آیتم‌های دو قیمتی در دو سایز بزرگ و کوچک سرو می‌شود</p>
+    </div>
+  </div>
+
+  <div class="menu-section">
+    <div class="section-title">Shakes</div>
+    <div class="menu-items">
+      <ul>
+        <li>وانیل <span>120</span></li>
+        <li>اسپرسو <span>120</span></li>
+        <li>نسکافه <span>120</span></li>
+        <li>کارامل <span>120</span></li>
+        <li>بیسکوییت <span>130</span></li>
+        <li>نوتلا <span>140</span></li>
+        <li>شکلات فندق <span>140</span></li>
+        <li>بادام زمینی <span>150</span></li>
+        <li>موز <span>150</span></li>
+        <li>موز وانیل <span>150</span></li>
+        <li>نوت فرنگی <span>160</span></li>
+        <li>بایکیت <span>160</span></li>
+        <li>شیک ماربل <span>160</span></li>
+        <li>موز شکلات <span>160</span></li>
+      </ul>
+    </div>
+  </div>
+
+  <div class="menu-section">
+    <div class="section-title">Hot Drink</div>
+    <div class="menu-items">
+      <ul>
+        <li>شیر پسته زعفرانی <span>70/100</span></li>
+        <li>شیر کاکائو (فندقی / کارامل) <span>70/100</span></li>
+        <li>هات چاکلت <span>80/120</span></li>
+      </ul>
+      <hr class="note-line" />
+      <p class="note">آیتم‌های دو قیمتی در دو سایز بزرگ و کوچک سرو می‌شود</p>
+    </div>
+  </div>
+
+  <div class="menu-section">
+    <div class="section-title">Cake</div>
+    <div class="menu-items">
+      <ul>
+        <li>کیک شکلاتی <span>70</span></li>
+        <li>کیک شکلات خامه <span>80</span></li>
+      </ul>
+    </div>
+  </div>
+
+  <div class="menu-section">
+    <div class="section-title">Tea Bar <span class="french-press">(French press)</span></div>
+    <div class="menu-items">
+      <ul>
+        <li>چای کلاسیک تک نفره <span>35</span></li>
+        <li>چای کلاسیک ۲ نفره <span>60</span></li>
+        <li>چای کلاسیک ۴ نفره <span>80</span></li>
+        <li>چای سبز <span>70</span></li>
+        <li>چای هل <span>70</span></li>
+        <li>چای دارچین <span>70</span></li>
+        <li>چای بهارنارنج <span>70</span></li>
+        <li>چای گل‌محمدی <span>70</span></li>
+        <li>چای ترش <span>80</span></li>
+        <li>چای زعفران <span>90</span></li>
+      </ul>
+    </div>
+  </div>
+
+  <div class="menu-section">
+    <div class="section-title">Herbal Tea <span class="french-press">(French press)</span></div>
+    <div class="menu-items">
+      <ul>
+        <li>دمنوش آویشن <span>60</span></li>
+        <li>دمنوش بهارنارنج <span>60</span></li>
+        <li>دمنوش گل‌گاوزبان <span>70</span></li>
+        <li>دمنوش بابونه <span>70</span></li>
+        <li>دمنوش گل‌محمدی <span>70</span></li>
+        <li>دمنوش آرامش <span>80</span></li>
+        <li>دمنوش ماربل <span>90</span></li>
+      </ul>
+    </div>
+  </div>
+
+  <div class="menu-section">
+    <div class="section-title">Cold Drink</div>
+    <div class="menu-items">
+      <ul>
+        <li>لیموناد <span>70</span></li>
+        <li>موهیتو <span>80</span></li>
+        <li>رد موهیتو <span>90</span></li>
+        <li>بلو موهیتو <span>90</span></li>
+        <li>شیر موز <span>100</span></li>
+      </ul>
+    </div>
+  </div>
+
+  <script>
+    const sections = document.querySelectorAll('.menu-section');
+
+    function checkVisibility() {
+      const triggerBottom = window.innerHeight * 0.85;
+      sections.forEach(section => {
+        const sectionTop = section.getBoundingClientRect().top;
+        if (sectionTop < triggerBottom) {
+          section.classList.add('visible');
+        } else {
+          section.classList.remove('visible');
+        }
+      });
+    }
+
+    window.addEventListener('scroll', checkVisibility);
+    window.addEventListener('load', checkVisibility);
+  </script>
+
+</body>
+</html>
